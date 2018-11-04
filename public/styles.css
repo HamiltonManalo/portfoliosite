@@ -1,0 +1,169 @@
+/* Header */
+.logo {
+    font-family: 'Spectral', serif;
+    text-align: center;
+    font-size: 30pt; 
+    margin: 0;
+    padding: 2% 0px 0px 0px;
+}
+
+.navbar {
+    position: relative;
+    margin: auto;
+    width: 210px;
+    display: flex;
+}
+
+.navlink {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-style: none;
+    cursor: pointer;
+    font-weight: 1px;
+}
+.header > hr {
+    width: 80%;
+    margin-block-start: 0px
+}
+/* Content */
+h2 {
+    text-align: center;
+}
+body {
+    color: #333;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #fff;
+}
+.grid {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    align-content: center;
+    display: flex
+}
+.page-content {
+    /* padding-left: 15%;
+    padding-right: 15%;
+    width: 100%; */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.project:nth-child(odd) {
+    width: 40%;
+    position: relative;
+    right: 20%;
+    margin: auto;
+}
+.project:nth-child(even) {
+    width: 40%;
+    position: relative;
+    left: 20%;
+    margin: auto;
+}
+.page-content > p {
+    margin-block-start: 0em;
+}
+
+/* Code formatting */
+
+.indent1 {
+    padding-left: 2em;
+    margin-block-start:0em;
+    margin-block-end: 0em;
+    line-height: 0.2em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.indent2 {
+    padding-left: 4em;
+    white-space: pre-wrap;
+    margin-block-start:0em;
+    margin-block-end: 0em;
+    line-height: 0.2em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.indent3 {
+    padding-left: 6em; 
+    margin-block-start:0em;
+    margin-block-end: 0em;
+    line-height: 025em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+.codebox {
+    background-color: rgb(42, 42, 42);
+    width: 80%;
+    line-height: normal;
+    height: 80%;
+    overflow: hidden;
+}
+.codebox > p {
+    white-space: normal;
+    word-wrap: break-all; 
+    font-size: 9.5pt;
+    display: inline;
+    font-family: "Consolas";
+}
+
+.indent1 > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Kotlin Formatting */
+
+.keyword, .modifier {
+    padding: 0;
+    margin: 0;
+    border: none;
+    -webkit-text-fill-color: rgb(204, 120, 50);
+    background-color: rgb(42, 42, 42);
+}
+
+
+.parameter, .functioncall, .class, .lvariable {
+    -webkit-text-fill-color: rgb(169, 183, 198);
+    background-color: rgb(42, 42, 42);
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+.parametername {
+    font-size: 8pt;
+    letter-spacing: 0;
+    background-color: rgb(58, 58, 58);
+    -webkit-text-fill-color: #787878;
+}
+
+.string {
+    -webkit-text-fill-color: #6a8759;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.kcomment {
+    -webkit-text-fill-color: #808080; 
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.kfundec {
+    -webkit-text-fill-color: #FFC66D; 
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
