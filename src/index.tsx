@@ -19,18 +19,27 @@ class App extends React.Component {
         return ( 
             <div> 
                 <Header/>
-                <Switch> 
-                    <Route exact={true} path ="/" component={Main}/>
-                    <Route path="/resume" component= {Resume} />
-                    <Route path="/about" component= {About} />
-                    <Route path="/portfolio" component= {Portfolio} />
-                </Switch> 
-            
+                <div className="accent">
+                    <Switch> 
+                        <Route exact={true} path ="/" component={Main}/>
+                        <Route path="/resume" component= {Resume} />
+                        <Route path="/about" component= {About} />
+                        <Route path="/portfolio" component= {Portfolio} />
+                        <Route component={NoMatch} />
+                    </Switch> 
+                </div>
             </div>
         )
     }
 }
-
+function NoMatch({location}: any){
+    return (
+        <div className="page-content">
+            <h1>Error 404 Will Robinson!</h1>
+            <p>You seem to have gotten lost, please check the navigation bar for directions </p> 
+        </div>
+    )
+}
 ReactDOM.render(
     <Router>
         <App />

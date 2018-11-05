@@ -2,15 +2,21 @@
 .logo {
     font-family: 'Spectral', serif;
     text-align: center;
-    font-size: 30pt; 
-    margin: 0;
-    padding: 2% 0px 0px 0px;
+    font-size: 30pt;
+    margin: 0px auto 0px auto;
+    padding: 2% 0px 1% 0px;
+    border: 2px;
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    width: 26%;
+    position: relative;
 }
 
 .navbar {
     position: relative;
     margin: auto;
-    width: 210px;
+    width: 200px;
     display: flex;
 }
 
@@ -20,13 +26,23 @@
     background-color: white;
     border-style: none;
     cursor: pointer;
-    font-weight: 1px;
+    border-bottom: solid .75em transparent;
+    box-shadow: 0 1.5px 0 -1.5px black;
+    background: white padding-box;
 }
 .header > hr {
     width: 80%;
-    margin-block-start: 0px
+    border-style: solid;
+    border-top-width: 2.53px;
+    border-radius: 2px;
 }
 /* Content */
+
+/* .accent {
+    background-color: rgb(80, 80, 80);
+    height: calc(100vh - 5%);
+} */
+
 h2 {
     text-align: center;
 }
@@ -55,25 +71,86 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 .project:nth-child(odd) {
-    width: 40%;
+    width: 80%;
     position: relative;
-    right: 20%;
+    /* right: 10%; */
     margin: auto;
+    clear: left;
+    padding: 4%;
 }
+
 .project:nth-child(even) {
-    width: 40%;
+    width: 80%;
     position: relative;
-    left: 20%;
+    /* left: 10%; */
     margin: auto;
+    clear: right;
+    padding: 4%;
 }
+.projectimgl {
+    width: 50%;
+    height: 60%;
+    position: relative;
+    /* right: 10%; */
+    margin: auto;
+    float: left;
+    padding: 0px 4%;
+}
+.projectimgr {
+    width: 50%;
+    height: 60%;
+    position: relative;
+    /* left: 20%; */
+    margin: auto;
+    float: right;
+    padding: 0px 0px 0px 4%;
+}
+
 .page-content > p {
     margin-block-start: 0em;
 }
 
-/* Code formatting */
+/* Social Media */
 
+.social {
+    float: left;
+}
+
+.fab {
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.social .fab {
+    padding: 15px;
+    font-size: 30px;
+    margin: 1px;
+}
+.social .fa-linkedin {
+    padding: 15px 16.5px 15px 16.5px;
+}
+.projects .fab {
+    padding: 5px;
+    font-size: 20px;
+}
+
+.fa-github {
+    background: #212529;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #0E76A8;
+    /* border-radius: 0; */
+    color: #fff;
+    /* border-width: 1px;
+    border-style: solid; */
+}
+/* Code formatting */
 .indent1 {
     padding-left: 2em;
     margin-block-start:0em;
@@ -155,15 +232,11 @@ body {
 
 .kcomment {
     -webkit-text-fill-color: #808080; 
-    padding: 0;
-    margin: 0;
     border: none;
 }
 
 .kfundec {
     -webkit-text-fill-color: #FFC66D; 
-    padding: 0;
-    margin: 0;
     border: none;
 }
 

@@ -1,5 +1,5 @@
 import * as React from "react"; 
-
+import Typing from 'react-typing-animation';
 export default class Resume extends React.Component {
     constructor(props : any) {
         super(props)
@@ -7,7 +7,7 @@ export default class Resume extends React.Component {
     public render() {
         return (
             <div> 
-                                <p className="page-content">Resume</p>
+                <p className="page-content">Resume</p>
                 <div className="page-content">
                 <div className="codebox">
                                 <p className="keyword"> public class </p><p className="class"> HamiltonsResume  {'{'} <br/> </p> 
@@ -308,6 +308,7 @@ export default class Resume extends React.Component {
                         </p>
                         <br/>
                         <br/>
+                        <Typing speed={100}><span className="indent1 kcomment">//Click below to contact via e-mail</span> <Typing.Cursor /> </Typing> 
                         <p className="indent1">
                             <a href="mailto:i@hamiltonmanalo.com">
                             <span className="keyword">public fun</span>

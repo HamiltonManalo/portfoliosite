@@ -9,7 +9,7 @@ export default class Main extends React.Component {
             <div className="grid">    
                 <div className="page-content"> 
                 <h2>Main</h2>
-                <p> This site is currently under-construction and being built via TypeScript and React</p>
+                <p> This site is still going through some growing pains.</p>
                 </div> 
             </div>
         )
