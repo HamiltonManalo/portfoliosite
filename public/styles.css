@@ -240,3 +240,6 @@ body {
     border: none;
 }
 
+html {
+    overflow-y: scroll;
+}
