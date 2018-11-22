@@ -6,12 +6,9 @@ export default class Main extends React.Component {
     }
     public render() {
         return (
-           
-                <div className="page-content"> 
-                <h2>Main</h2>
+            <div className="home--content">
                 <p> This site is still going through some growing pains.</p>
-                </div> 
-           
+            </div>
         )
     }
 }

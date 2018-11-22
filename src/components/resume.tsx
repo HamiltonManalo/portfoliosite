@@ -6,12 +6,14 @@ export default class Resume extends React.Component {
     }
     public render() {
         return (
-            <div> 
-                <p className="page-content">Resume</p>
-                <div className="page-content">
+            <div className="resume"> 
+                <a href="./res/hamiltonmanalo.pdf" target="_blank" className="blue-button">
+                    <span className="blue-button--icon fas fa-download" />
+                    Get PDF Copy
+                </a>
                 <div className="codebox">
-                                <p className="keyword"> public class </p><p className="class"> HamiltonsResume  {'{'} <br/> </p> 
-                        
+                        <p> <span className="keyword"> public class</span><span className="class"> HamiltonsResume {'{'}</span> </p>
+                        <br/>
                         <p className="indent1"> 
                             <span className="keyword"> val </span> 
                             <span className="lvariable"> Name = "Hamilton Manalo" </span> 
@@ -24,7 +26,7 @@ export default class Resume extends React.Component {
                         <br/>
                         <p className="indent1"> 
                             <span className="keyword"> val </span> 
-                            <span className="lvariable"> Email = "i@hamiltonmanalo.com" </span>
+                            <span className="lvariable"> Email =<a href="mailto:i@hamiltonmanalo.com" className='lvariable'>"i@hamiltonmanalo.com" </a> </span>
                         </p>
                         <br/>
                         <br/>
@@ -301,7 +303,7 @@ export default class Resume extends React.Component {
                             <br/>
                         </p>
                         <p className="indent2">
-                            <span className="lvariable">listOf{'<'}Dependency Injection{'>'}(</span>
+                            <span className="lvariable">listOf{'<'}DependencyInjection{'>'}(</span>
                             <span className="string">"Autofac"</span>
                             <span className="lvariable">)</span> 
                         <span className="lvariable">)</span> 
@@ -319,7 +321,6 @@ export default class Resume extends React.Component {
                         <br/>
                         <p className="lvariable">{'}'} </p> 
                      </div>
-                </div>
             </div> 
         )
     }

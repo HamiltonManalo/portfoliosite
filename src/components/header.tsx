@@ -1,30 +1,74 @@
 import * as React from "react"; 
 import {Link} from "react-router-dom";
-export default class Header extends React.Component {
+import {withRouter} from "react-router"
+
+interface IProps {
+    name: string
+    location: any
+}
+interface IState {
+    menuExpanded: boolean
+}
+
+// type Props = IProps & WithRouterProps
+
+class Header extends React.Component<IProps, IState> {
     constructor(props : any) {
         super(props)
+
+        this.state = {
+            menuExpanded: false,
+        }
     }
+    
     public render() {
+        const {menuExpanded} = this.state
+        
+        const menuClass = menuExpanded ? 'menu-button open' : 'menu-button'
+        
         return (
-            <div className="header"> 
-                <h1 className="logo">Hamilton Manalo</h1> 
-                <div className="navbar"> 
-                    <Link to="/" >
-                        <button className="navlink"> Home </button> 
-                    </Link>
-                    <Link to="/resume">
-                        <button className="navlink"> Resume </button>
-                    </Link>
-                    <Link to="/about">
-                        <button className="navlink"> About </button>
-                    </Link>
-                    <Link to="/portfolio"> 
-                        <button className="navlink"> Portfolio  </button>
-                    </Link>
-                </div>
-                
-                <hr/>
-            </div> 
+            <header className="header">
+                <h1 className="header-title">Hamilton Manalo</h1>
+                <button className={menuClass} onClick={this.handleToggleMenu}>
+                    <div className="menu-button-hamburger" />
+                </button>
+                {this.menu}
+            </header>
         )
     }
+
+    private handleToggleMenu = (): void => {
+        this.setState({ menuExpanded: !this.state.menuExpanded})
+    }
+
+    private get menu() {
+        const {menuExpanded} = this.state
+
+        const menuClass = menuExpanded ? 'app-nav open' : 'app-nav'            
+
+        return (
+            <nav className={menuClass}>
+                <div className="app-nav--menu">
+                    <Link to="/" className={this.linkClassName('')} >Home</Link>
+                    <Link to="/resume" className={this.linkClassName('resume')}>Resume</Link>
+                    <Link to="/about" className={this.linkClassName('about')}>About</Link>
+                    <Link to="/portfolio" className={this.linkClassName('portfolio')}>Portfolio</Link>
+                </div>
+            </nav>
+        )
+    }
+
+    private linkClassName = (linkText) => {
+        const {location} = this.props
+
+        console.log(location)
+
+        if (location.pathname === `/${linkText}`) {
+            return 'app-nav--link active'
+        }
+
+        return 'app-nav--link'
+    }
 }
+
+export default withRouter(Header)

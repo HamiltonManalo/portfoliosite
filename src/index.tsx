@@ -17,18 +17,20 @@ class App extends React.Component {
     }
     public render() {
         return ( 
-            <div> 
-                <Header/>
-                <div className="accent">
-                    <Switch> 
-                        <Route exact={true} path ="/" component={Main}/>
-                        <Route path="/resume" component= {Resume} />
-                        <Route path="/about" component= {About} />
-                        <Route path="/portfolio" component= {Portfolio} />
-                        <Route component={NoMatch} />
-                    </Switch> 
+            <> 
+                <Header name="header"/>
+                <div className="app">
+                    <div className="page">
+                        <Switch> 
+                            <Route exact={true} path ="/" component={Main}/>
+                            <Route path="/resume" component= {Resume} />
+                            <Route path="/about" component= {About} />
+                            <Route path="/portfolio" component= {Portfolio} />
+                            <Route component={NoMatch} />
+                        </Switch> 
+                    </div>
                 </div>
-            </div>
+            </>
         )
     }
 }
