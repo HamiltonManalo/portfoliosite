@@ -400,12 +400,14 @@ a.about--link.linkedin:hover {
     line-height: 1em;
     height: 80%;
     overflow: hidden;
-    white-space: pre;
-    word-break: normal;
+    word-break: break-all;
     font-size: 9.5pt;
+    white-space: pre-wrap;
+    max-width: inherit;
+    
 }
 .codebox > p {
-    white-space: nowrap;
+    line-height: 1.6em
 }
 
 .indent1 {
