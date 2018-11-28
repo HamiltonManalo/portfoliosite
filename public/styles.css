@@ -366,6 +366,7 @@ a.about--link.linkedin:hover {
     min-width: 275px;
     font-size: 21px;
     line-height: 1.4em;
+    text-align: justify;
 }
 /* Home page */
 .home--content {
