@@ -12,22 +12,7 @@ export default class Resume extends React.Component {
                     Get PDF Copy
                 </a>
                 <div className="codebox">
-                        <p> <span className="keyword"> public class</span><span className="class"> HamiltonsResume {'{'}</span> </p>
-                        <br/>
-                        <p className="indent1"> 
-                            <span className="keyword"> val </span> 
-                            <span className="lvariable"> Name = "Hamilton Manalo" </span> 
-                        </p>
-                        <br/>
-                        <p className="indent1"> 
-                            <span className="keyword"> val </span> 
-                            <span className="lvariable"> Location = "Los Angeles, California" </span> 
-                        </p> 
-                        <br/>
-                        <p className="indent1"> 
-                            <span className="keyword"> val </span> 
-                            <span className="lvariable"> Email =<a href="mailto:i@hamiltonmanalo.com" className='lvariable'>"i@hamiltonmanalo.com" </a> </span>
-                        </p>
+                      
                         <br/>
                         <br/>
                         <p className="indent1"> 
